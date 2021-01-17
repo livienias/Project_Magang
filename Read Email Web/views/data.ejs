@@ -1,0 +1,50 @@
+<div class="data-content">
+    <div class="filter">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    </div>
+    <div class="mx-5" class="table-container">
+        <table id="data-table" class="content-table">
+            <thead>
+                <th>Average System Response</th>
+                <th>Branch Code</th>
+                <th>Current Ping Response</th>
+                <th>Email Date</th>
+                <th>Host Previously Down for</th>
+                <th>Host Previously Up for</th>
+                <th>Last Date Checked Down</th>
+                <th>Last Date Checked Up</th>
+                <th>Location</th>
+                <th>Name</th>
+                <th>Note</th>
+                <th>Status</th>
+                <th>System Availability</th>
+                <th>Total Checks Since Clear</th>
+                <th>Total Failed Checks</th>
+                <th>Uptime</th>
+                <th>System</th>
+            </thead>
+            <tbody>
+                <% for(var i=0; i < data.length; i++) { %>
+                    <tr>
+                    <td><%= data[i].Average_System_Response || '-' || '-' %></td>
+                    <td><%= data[i].Branch_Code || '-' %></td>
+                    <td><%= data[i].Current_Ping_Response || '-' %></td>
+                    <td><%= data[i].EmailDate || '-' %></td>
+                    <td><%= data[i].Host_Previously_DOWN_for || '-' %></td>
+                    <td><%= data[i].Last_Date_Checked_DOWN || '-' %></td>
+                    <td><%= data[i].Last_Date_Checked_UP || '-' %></td>
+                    <td><%= data[i].Location || '-' %></td>
+                    <td><%= data[i].Name || '-' %></td>
+                    <td><%= data[i].Note || '-' %></td>
+                    <td><%= data[i].Status || '-' %></td>
+                    <td><%= data[i].System_Availability || '-' %></td>
+                    <td><%= data[i].Total_Checks_Since_Clear || '-' %></td>
+                    <td><%= data[i].Total_Failed_Checks || '-' %></td>
+                    <td><%= data[i].Uptime || '-' %></td>
+                    <td><%= data[i].system || '-' %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
